@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import "./AppMobile.css";
+
+import { useState, useEfect, useEffect } from "react";
+import Section from "./components/Section";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Movie from "./components/Movie";
+import AppMain from "./AppMain";
+import SeeAll from "./components/SeeAll";
+import Search from "./components/Search";
+import Genre from "./components/Genre";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route exact path="/" element={<AppMain />} />
+        <Route path="/movie/:movie_id" element={<Movie />} />
+        <Route path="/see_all/:category/" element={<SeeAll />} />
+        <Route path="/search/:tag/" element={<Search />} />
+        <Route path="/genre/:genre/" element={<Genre />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

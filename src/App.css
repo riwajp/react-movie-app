@@ -1,38 +1,294 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+@import url("https://fonts.googleapis.com/css2?family=Raleway");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+a {
+  text-decoration: none;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.now_playing_container {
+  margin-top: 50px;
+  padding: 30px;
+  min-height: 300px;
 }
 
-@keyframes App-logo-spin {
+.now_playing_header {
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+.now_playing_text {
+  font-size: 40px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+}
+.now_playing_see_all_text a {
+  float: right;
+  margin-right: 10px;
+  color: yellow !important;
+}
+
+.now_playing_item {
+  max-height: 350px;
+}
+.now_playing_poster {
+  width: 100%;
+  max-height: 300px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.now_playing_poster_container {
+  overflow: hidden;
+  max-height: 270px;
+}
+.now_playing_poster:hover {
+  width: 110%;
+  height: 110%;
+  transition: 0.5s;
+}
+.now_playing_movie_title {
+  font-size: 13px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+}
+.movie_container {
+  margin-top: 100px;
+  padding: 20px;
+}
+
+.movie_img {
+  width: 100%;
+  height: auto;
+}
+.movie_name {
+  font-size: 30px;
+  font-family: "Raleway", sans-serif;
+}
+.movie_rating {
+  float: right;
+  margin-right: 20px;
+  color: yellow;
+  font-family: "Raleway", sans-serif;
+}
+.full_line {
+  width: 100%;
+  height: 3px;
+  background-color: maroon;
+}
+.movie_desc {
+  margin-top: 20px;
+  font-weight: 200;
+}
+.movie_details {
+  margin-top: 30px;
+  font-weight: 100;
+}
+.movie_details_right {
+  float: right;
+}
+.movie_tagline {
+  font-size: 30px;
+  color: grey;
+  margin-top: 10px;
+  font-family: "Dancing Script", cursive;
+}
+.movie_details_cast_title {
+  font-size: 25px;
+  margin-top: 20px;
+}
+.cast {
+  margin-top: 50px;
+}
+.cast_img {
+  max-width: 100%;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+.cast_name {
+  font-size: 13px;
+  line-height: 13px;
+}
+.see_all_title {
+  font-size: 30px;
+  font-family: "Raleway", sans-serif;
+  padding-bottom: 20px;
+  padding: 10px;
+  margin-top: 100px;
+}
+.nav_container {
+  width: 100%;
+  height: 30px;
+  background-color: rgba(18, 75, 128, 0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 10px;
+  display: flex;
+}
+.nav_title {
+  font-size: 25px;
+  font-family: "Raleway", sans-serif;
+}
+.nav_search_container {
+  position: absolute;
+  right: 100px;
+}
+
+.nav_search {
+  background-color: rgba(252, 243, 243, 0.5);
+  border: 0 solid white;
+  border-radius: 15px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  width: 200px;
+  height: 30px;
+  padding-left: 10px;
+}
+.nav_search_btn {
+  width: 70px;
+  height: 32px;
+  background-color: rgba(54, 211, 190, 0.5);
+  border: 0 solid white;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.main_container {
+  width: 100%;
+  height: auto;
+  animation: fadein 2s;
+}
+
+@keyframes fadein {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
   }
+}
+.main_container {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+.main_img {
+  position: relative;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  max-width: 120%;
+
+  height: auto;
+  min-height: 100%;
+  z-index: -1;
+}
+.main_contents {
+  position: absolute;
+  bottom: 200px;
+  left: 50px;
+  z-index: -1;
+}
+.main_movie_name {
+  font-size: 80px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+}
+.short_line {
+  width: 100px;
+  height: 5px;
+  background-color: maroon;
+}
+.main_movie_tagline {
+  font-family: "Dancing Script", cursive;
+  font-size: 40px;
+}
+.main_btns {
+  position: absolute;
+  bottom: 100px;
+  left: 45%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  max-width: 200px;
+  min-width: 100px;
+}
+.main_dot {
+  background-color: ;
+  border: 1px solid white;
+  width: 10px;
+  height: 10px;
+
+  border-radius: 100%;
+
+  margin-left: 20px;
+}
+
+.footer_container {
+  width: 100%;
+  min-height: 100px;
+  background-color: rgba(18, 75, 128, 0.9);
+  margin-top: 200px;
+  padding: 10px;
+  text-align: center;
+  padding-top: 50px;
+}
+.footer_title {
+  font-size: 40px;
+  font-family: "Raleway", sans-serif;
+}
+
+.footer_icons {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-top: 20px;
+  padding-bottom: 20px;
+}
+
+.icon {
+  height: 30px;
+  width: auto;
+  margin-right: 20px;
+}
+.nav_home {
+  margin-left: 25px;
+  font-weight: 300;
+}
+.nav_categories {
+  margin-left: 25px;
+}
+.nav_categories_contents {
+  display: none;
+  min-width: 150px;
+
+  background-color: rgba(18, 75, 128, 0.9);
+  min-height: 100px;
+  color: white;
+  z-index: 3;
+  position: absolute;
+}
+.nav_categories:hover .nav_categories_contents {
+  display: block;
+}
+.nav_categories_cat {
+  font-weight: 200;
+  font-size: 15px;
+  height: 25px;
+  width: 100%;
+  padding: 5px;
+}
+.nav_categories_cat:hover {
+  background-color: lightblue;
+  color: black;
+}
+.pages {
+  margin-top: 50px;
+  text-align: center;
+}
+.page_no {
+  color: yellow;
+  margin-left: 10px;
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 5px;
 }
